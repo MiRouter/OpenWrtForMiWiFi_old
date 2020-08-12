@@ -19,6 +19,7 @@ on:
       - main
     paths:
       - 'ac2100'
+      - 'rm2100'
       - 'r3g'
 #  schedule:
 #    - cron: 0 8 * * 5
@@ -47,7 +48,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [ac2100,r3g]
+        target: [ac2100,r3g,rm2100]
         
     steps:
     - name: Checkout
