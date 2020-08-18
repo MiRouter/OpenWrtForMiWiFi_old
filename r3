@@ -1,6 +1,6 @@
 CONFIG_TARGET_ramips=y
-CONFIG_TARGET_ramips_mt7621=y
-CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_redmi-router-ac2100=y
+CONFIG_TARGET_ramips_mt7620=y
+CONFIG_TARGET_ramips_mt7620_DEVICE_xiaomi_miwifi-r3=y
 CONFIG_PACKAGE_6in4=y
 CONFIG_PACKAGE_ip6tables=y
 CONFIG_PACKAGE_iptables-mod-conntrack-extra=y

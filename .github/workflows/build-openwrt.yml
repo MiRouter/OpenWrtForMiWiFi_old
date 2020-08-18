@@ -21,6 +21,7 @@ on:
       - 'ac2100'
       - 'rm2100'
       - 'r3g'
+      - 'r3'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -48,7 +49,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [ac2100,r3g,rm2100]
+        target: [ac2100,r3g,rm2100,r3]
         
     steps:
     - name: Checkout
