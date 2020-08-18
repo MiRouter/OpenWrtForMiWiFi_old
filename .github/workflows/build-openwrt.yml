@@ -91,7 +91,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && cp files openwrt/files
+        [ -e files ] && cp -Rf files openwrt/files
         [ -e diy ] && cp -Rf diy/* openwrt
         [ -e ${{matrix.target}} ] && mv ${{matrix.target}} openwrt/.config
         chmod +x $DIY_P2_SH
