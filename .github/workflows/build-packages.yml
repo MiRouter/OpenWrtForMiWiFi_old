@@ -35,7 +35,8 @@ env:
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: true
+  UPLOAD_PACKAGES_DIR: true
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: false
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
@@ -91,7 +92,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && cp -Rf files/* openwrt/files
+        [ -e files ] && cp -rf files openwrt/files
         [ -e diy ] && cp -Rf diy/* openwrt
         [ -e ${{matrix.target}} ] && mv ${{matrix.target}} openwrt/.config
         chmod +x $DIY_P2_SH
@@ -132,6 +133,13 @@ jobs:
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
+        
+    - name: Upload packages directory
+      uses: actions/upload-artifact@main
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_PACKAGES_DIR == 'true'
+      with:
+        name: OpenWrt_Packages${{ env.FILE_DATE }}
+        path: openwrt/bin/packages
 
     - name: Organize files
       id: organize
