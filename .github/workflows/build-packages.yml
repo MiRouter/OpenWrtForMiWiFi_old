@@ -18,6 +18,10 @@ on:
     branches:
       - main
     paths:
+      - 'ac2100'
+      - 'rm2100'
+      - 'r3g'
+      - 'r3'
       - 'packages'
 #  schedule:
 #    - cron: 0 8 * * 5
