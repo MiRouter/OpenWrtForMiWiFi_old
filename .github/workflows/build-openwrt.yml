@@ -18,27 +18,14 @@ on:
     branches:
       - main
     paths:
-      - 'ac2100'
-      - 'rm2100'
-      - 'r3g'
-      - 'r3'
-      - 'packages'
+      - 'common'
+      - 'config'
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
     types: started
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
-  FEEDS_CONF: feeds.conf.default
-  DIY_P1_SH: diy-part1.sh
-  DIY_P2_SH: diy-part2.sh
-  SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: true
-  UPLOAD_FIRMWARE: true
-  UPLOAD_COWTRANSFER: true
-  UPLOAD_WETRANSFER: true
   TZ: Asia/Shanghai
 
 jobs:
@@ -50,11 +37,26 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [ac2100,r3g,rm2100,r3]
+        target: [ac2100,r3g,rm2100,r3,packages]
         
     steps:
     - name: Checkout
       uses: actions/checkout@main
+
+    - name: Load Settings.ini
+      run: |
+        source "${GITHUB_WORKSPACE}/config/${{matrix.target}}/settings.ini"
+        echo "::set-env name=REPO_URL::${REPO_URL}"
+        echo "::set-env name=REPO_BRANCH::${REPO_BRANCH}"
+        echo "::set-env name=FEEDS_CONF::${FEEDS_CONF}"
+        echo "::set-env name=DIY_P1_SH::${DIY_P1_SH}"
+        echo "::set-env name=DIY_P2_SH::${DIY_P2_SH}"
+        echo "::set-env name=SSH_ACTIONS::${SSH_ACTIONS}"
+        echo "::set-env name=UPLOAD_BIN_DIR::${UPLOAD_BIN_DIR}"
+        echo "::set-env name=UPLOAD_PACKAGES_DIR::${UPLOAD_PACKAGES_DIR}"
+        echo "::set-env name=UPLOAD_FIRMWARE::${UPLOAD_FIRMWARE}"
+        echo "::set-env name=UPLOAD_COWTRANSFER::${UPLOAD_COWTRANSFER}"
+        echo "::set-env name=UPLOAD_WETRANSFER::${UPLOAD_WETRANSFER}"
 
     - name: Initialization environment
       env:
@@ -78,10 +80,25 @@ jobs:
 
     - name: Load custom feeds
       run: |
-        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        chmod +x $DIY_P1_SH
-        cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+        [ -e common/$FEEDS_CONF ] && cp common/$FEEDS_CONF openwrt/feeds.conf.default
+        [ -e config/${{matrix.target}}/$FEEDS_CONF ] && cp config/${{matrix.target}}/$FEEDS_CONF openwrt/feeds.conf.default
+        if [ -f "common/$DIY_P1_SH" ]; then
+        (
+          chmod +x common/$DIY_P1_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/common/$DIY_P1_SH
+          cd -
+        )
+        fi
+        if [ -f "config/${{matrix.target}}/$DIY_P1_SH" ]; then
+        (
+          chmod +x config/${{matrix.target}}/$DIY_P1_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/config/${{matrix.target}}/$DIY_P1_SH
+          cd -
+        )
+        fi
+
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -91,12 +108,27 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e files ] && cp -rf files openwrt/files
-        [ -e diy ] && cp -Rf diy/* openwrt
-        [ -e ${{matrix.target}} ] && mv ${{matrix.target}} openwrt/.config
-        chmod +x $DIY_P2_SH
-        cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        [ -e common/files ] && cp -rf common/files openwrt/files
+        [ -e common/diy ] && cp -Rf common/diy/* openwrt
+        [ -e config/${{matrix.target}}/files ] && cp -rf config/${{matrix.target}}/files openwrt/files
+        [ -e config/${{matrix.target}}/diy ] && cp -rf config/${{matrix.target}}/diy/* openwrt
+        [ -e config/${{matrix.target}}/.config ] && cp config/${{matrix.target}}/.config openwrt/.config
+        if [ -f "common/$DIY_P2_SH" ]; then
+        (
+          chmod +x common/$DIY_P2_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/common/$DIY_P2_SH
+          cd -
+        )
+        fi
+        if [ -f "config/${{matrix.target}}/$DIY_P2_SH" ]; then
+        (
+          chmod +x config/${{matrix.target}}/$DIY_P2_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/config/${{matrix.target}}/$DIY_P2_SH
+          cd -
+        )
+        fi
 
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@main
@@ -132,6 +164,13 @@ jobs:
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt/bin
+        
+    - name: Upload packages directory
+      uses: actions/upload-artifact@main
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_PACKAGES_DIR == 'true'
+      with:
+        name: OpenWrt_packages${{ env.FILE_DATE }}
+        path: openwrt/bin/packages
 
     - name: Organize files
       id: organize
