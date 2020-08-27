@@ -17,23 +17,22 @@ on:
   push:
     branches:
       - main
-#    paths:
+    paths:
+       - 'aaa'
 #      - 'common'
 #      - 'config'
 #  schedule:
 #    - cron: 0 8 * * 5
-  watch:
-    types: started
+#  watch:
+#    types: started
 
 env:
   TZ: Asia/Shanghai
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
-    if: 'liuran001' == github.event.sender.id
-    
-#    if: github.event.repository.owner.id == github.event.sender.id
+    runs-on: ubuntu-18.04   
+    if: github.event.repository.owner.id == github.event.sender.id
 
     name: Build ${{matrix.target}}
     strategy:
