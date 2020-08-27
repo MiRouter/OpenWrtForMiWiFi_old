@@ -37,7 +37,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [ac2100,r3g,rm2100,r3,packages]
+        target: [ac2100,r3g,rm2100,packages]
         
     steps:
     - name: Checkout
