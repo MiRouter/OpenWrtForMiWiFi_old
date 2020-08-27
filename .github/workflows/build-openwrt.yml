@@ -31,8 +31,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    if: liuran001 == github.event.sender.id
+    
 #    if: github.event.repository.owner.id == github.event.sender.id
-     if: liuran001 == github.event.sender.id
 
     name: Build ${{matrix.target}}
     strategy:
