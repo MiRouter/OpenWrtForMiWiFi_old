@@ -49,6 +49,7 @@ jobs:
         echo "::set-env name=REPO_BRANCH::${REPO_BRANCH}"
         echo "::set-env name=FEEDS_CONF::${FEEDS_CONF}"
         echo "::set-env name=COMMON_DIR::${COMMON_DIR}"
+        echo "::set-env name=FIRMWARE_TAG::${FIRMWARE_TAG}"
         echo "::set-env name=DIY_P1_SH::${DIY_P1_SH}"
         echo "::set-env name=DIY_P2_SH::${DIY_P2_SH}"
         echo "::set-env name=SSH_ACTIONS::${SSH_ACTIONS}"
@@ -181,7 +182,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
-        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_bin${{ env.DEVICE_NAME }}_${{ FIRMWARE_TAG }}${{ env.FILE_DATE }}
         path: openwrt/bin
         
     - name: Upload packages directory
@@ -204,7 +205,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_firmware${{ env.DEVICE_NAME }}_${{ FIRMWARE_TAG }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
