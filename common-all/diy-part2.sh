@@ -14,4 +14,6 @@
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 cd package
 git clone https://github.com/fw876/helloworld
-
+mkdir ctcgfw
+cd ctcgfw
+svn co https://github.com/project-openwrt/openwrt/trunk/package/ctcgfw
