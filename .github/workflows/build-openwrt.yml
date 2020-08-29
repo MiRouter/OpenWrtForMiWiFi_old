@@ -19,8 +19,6 @@ on:
       - main
     paths:
        - 'aaa'
-#      - 'common'
-#      - 'config'
 #  schedule:
 #    - cron: 0 8 * * 5
 #  watch:
@@ -38,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [ac2100,r3g,rm2100,packages]
+        target: [ac2100,r3g,rm2100,packages,ac2100-dev,r3g-dev,rm2100-dev]
         
     steps:
     - name: Checkout
@@ -50,6 +48,7 @@ jobs:
         echo "::set-env name=REPO_URL::${REPO_URL}"
         echo "::set-env name=REPO_BRANCH::${REPO_BRANCH}"
         echo "::set-env name=FEEDS_CONF::${FEEDS_CONF}"
+        echo "::set-env name=COMMON_DIR::${COMMON_DIR}"
         echo "::set-env name=DIY_P1_SH::${DIY_P1_SH}"
         echo "::set-env name=DIY_P2_SH::${DIY_P2_SH}"
         echo "::set-env name=SSH_ACTIONS::${SSH_ACTIONS}"
@@ -81,13 +80,22 @@ jobs:
 
     - name: Load custom feeds
       run: |
-        [ -e common/$FEEDS_CONF ] && cp common/$FEEDS_CONF openwrt/feeds.conf.default
+        [ -e common-all/$FEEDS_CONF ] && cp common-all/$FEEDS_CONF openwrt/feeds.conf.default
+        [ -e $COMMON_DIR/$FEEDS_CONF ] && cp $COMMON_DIR/$FEEDS_CONF openwrt/feeds.conf.default
         [ -e config/${{matrix.target}}/$FEEDS_CONF ] && cp config/${{matrix.target}}/$FEEDS_CONF openwrt/feeds.conf.default
-        if [ -f "common/$DIY_P1_SH" ]; then
+        if [ -f "common-all/$DIY_P1_SH" ]; then
         (
-          chmod +x common/$DIY_P1_SH
+          chmod +x common-all/$DIY_P1_SH
           cd openwrt
-          $GITHUB_WORKSPACE/common/$DIY_P1_SH
+          $GITHUB_WORKSPACE/common-all/$DIY_P1_SH
+          cd -
+        )
+        fi
+        if [ -f "$COMMON_DIR/$DIY_P1_SH" ]; then
+        (
+          chmod +x $COMMON_DIR/$DIY_P1_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/$COMMON_DIR/$DIY_P1_SH
           cd -
         )
         fi
@@ -109,16 +117,26 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e common/files ] && cp -rf common/files openwrt/files
-        [ -e common/diy ] && cp -Rf common/diy/* openwrt
+        [ -e common-all/files ] && cp -rf common-all/files openwrt/files
+        [ -e common-all/diy ] && cp -Rf common-all/diy/* openwrt
+        [ -e $COMMON_DIR/files ] && cp -rf $COMMON_DIR/files openwrt/files
+        [ -e $COMMON_DIR/diy ] && cp -Rf $COMMON_DIR/diy/* openwrt
         [ -e config/${{matrix.target}}/files ] && cp -rf config/${{matrix.target}}/files openwrt/files
         [ -e config/${{matrix.target}}/diy ] && cp -rf config/${{matrix.target}}/diy/* openwrt
         [ -e config/${{matrix.target}}/.config ] && cp config/${{matrix.target}}/.config openwrt/.config
-        if [ -f "common/$DIY_P2_SH" ]; then
+        if [ -f "common-all/$DIY_P2_SH" ]; then
         (
-          chmod +x common/$DIY_P2_SH
+          chmod +x common-all/$DIY_P2_SH
           cd openwrt
-          $GITHUB_WORKSPACE/common/$DIY_P2_SH
+          $GITHUB_WORKSPACE/common-all/$DIY_P2_SH
+          cd -
+        )
+        fi
+        if [ -f "$COMMON_DIR/$DIY_P2_SH" ]; then
+        (
+          chmod +x $COMMON_DIR/$DIY_P2_SH
+          cd openwrt
+          $GITHUB_WORKSPACE/$COMMON_DIR/$DIY_P2_SH
           cd -
         )
         fi
