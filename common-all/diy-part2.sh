@@ -13,5 +13,4 @@
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 cd package
-git clone -b packages-19.07 https://github.com/liuran001/openwrt-packages
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/mt
