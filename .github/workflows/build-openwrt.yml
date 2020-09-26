@@ -13,7 +13,6 @@ name: Build OpenWrt
 on:
   repository_dispatch:
   workflow_dispatch:
-    types: main
   release:
     types: published
   push:
