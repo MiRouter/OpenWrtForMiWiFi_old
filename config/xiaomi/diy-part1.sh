@@ -19,6 +19,7 @@ rm -rf lean/k3screenctrl
 rm -rf lean/libcryptopp
 rm -rf lean/luci-app-sfe
 rm -rf lean/openwrt-fullconenat
+rm -rf lean/v2ray
 rm -rf lean/.svn
 echo "佛祖保佑，编译必成"
 #                  佛祖保佑       永不宕机     永无BUG              //
