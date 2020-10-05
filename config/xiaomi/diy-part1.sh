@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "佛祖保佑，编译必成"
+git clone https://github.com/liuran001/luci-app-argon-new package/luci-app-argon-new
 #                  佛祖保佑       永不宕机     永无BUG              //
 
 
