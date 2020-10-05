@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "佛祖保佑，编译必成"
-git clone https://github.com/liuran001/luci-app-argon-new package/luci-app-argon-new
+svn co  https://github.com/liuran001/openwrt-theme/trunk/luci-theme-argon-lr package/luci-theme-argon-lr
 #                  佛祖保佑       永不宕机     永无BUG              //
 
 
