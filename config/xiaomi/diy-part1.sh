@@ -1,26 +1,4 @@
 #!/bin/bash
-sed -i 's/kmod-mt7603 kmod-mt7615e kmod-mt7615-firmware/kmod-mt7603e kmod-mt7615d luci-app-mtwifi/g' target/linux/ramips/image/mt7621.mk
-sed -i 's/kmod-mt7603 kmod-mt76x2/kmod-mt7603e kmod-mt76x2e luci-app-mtwifi/g' target/linux/ramips/image/mt7621.mk
-sed -i '/wpad-openssl/d' target/linux/ramips/image/mt7621.mk
-cd package
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean
-rm -rf lean/shortcut-fe
-rm -rf lean/autocore
-rm -rf lean/automount
-rm -rf lean/autosamba
-rm -rf lean/coremark
-rm -rf lean/csstidy
-rm -rf lean/default-settings
-rm -rf lean/dsmboot
-rm -rf lean/fast-classifier
-rm -rf lean/gmediarender
-rm -rf lean/k3-brcmfmac4366c-firmware
-rm -rf lean/k3screenctrl
-rm -rf lean/libcryptopp
-rm -rf lean/luci-app-sfe
-rm -rf lean/openwrt-fullconenat
-rm -rf lean/v2ray
-rm -rf lean/.svn
 echo "佛祖保佑，编译必成"
 #                  佛祖保佑       永不宕机     永无BUG              //
 
