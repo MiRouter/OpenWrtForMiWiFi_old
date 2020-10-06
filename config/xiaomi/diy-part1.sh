@@ -1,6 +1,12 @@
 #!/bin/bash
 echo "佛祖保佑，编译必成"
 svn co  https://github.com/liuran001/openwrt-theme/trunk/luci-theme-argon-lr package/luci-theme-argon-lr
+svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-koolproxyr package/luci-app-koolproxyr
+svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-vssr-plus package/luci-app-vssr-plus
+svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-passwall-plus package/luci-app-passwall-plus
+
+
+
 #                  佛祖保佑       永不宕机     永无BUG              //
 
 
