@@ -5,6 +5,7 @@ svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-koolproxyR 
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-vssr-plus package/luci-app-vssr-plus
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-passwall-plus package/luci-app-passwall-plus
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-theme-ifit package/luci-theme-ifit
+svn co  https://github.com/liuran001/openwrt-packages/trunk/openwrt-udpspeeder package/udpspeeder
 
 
 
