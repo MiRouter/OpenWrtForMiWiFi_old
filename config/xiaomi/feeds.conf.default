@@ -1,6 +1,0 @@
-src-git packages https://github.com/project-openwrt/packages.git;openwrt-18.06
-src-git luci https://github.com/project-openwrt/luci.git;openwrt-18.06
-src-git routing https://github.com/openwrt-routing/packages.git
-src-git telephony https://github.com/openwrt/telephony.git
-src-git x https://github.com/x-wrt/com.x-wrt.git
-#src-git nx https://github.com/liuran001/openwrt-packages.git
