@@ -12,17 +12,18 @@ name: Build OpenWrt
 
 on:
   repository_dispatch:
+  workflow_dispatch:
   release:
     types: published
   push:
     branches:
       - main
-    paths:
-       - 'aaa'
+#    paths:
+#       - 'aaa'
 #  schedule:
 #    - cron: 0 8 * * 5
-#  watch:
-#    types: started
+  watch:
+    types: started
 
 env:
   TZ: Asia/Shanghai
@@ -30,13 +31,13 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04   
-#    if: github.event.repository.owner.id == github.event.sender.id
+    if: github.event.repository.owner.id == github.event.sender.id
 
     name: Build ${{matrix.target}}
     strategy:
       fail-fast: false
       matrix:
-        target: [ac2100,r3g,rm2100,packages,ac2100-dev,r3g-dev,rm2100-dev]
+        target: [xiaomi]
         
     steps:
     - name: Checkout
