@@ -6,6 +6,7 @@ svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-vssr-plus p
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-passwall-plus package/luci-app-passwall-plus
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-theme-ifit package/luci-theme-ifit
 svn co  https://github.com/liuran001/openwrt-packages/trunk/openwrt-udpspeeder package/udpspeeder
+git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 
 
