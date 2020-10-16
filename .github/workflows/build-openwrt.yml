@@ -222,3 +222,19 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
+
+    - name: Upload packages directory to Gitee
+      if: steps.organize.outputs.status == 'success' 
+      run: |
+        git config --global user.email "liuran001@126.com"
+        git config --global user.name "liuran001"
+        git clone https://gitee.com/liuran001/MyOpenWrtIPK.git
+        mkdir MyOpenWrtIPK/$(TZ='Asia/Shanghai' %m%d)
+        cp -rf openwrt/bin/packages MyOpenWrtIPK/$(TZ='Asia/Shanghai' %m%d)/packages
+        git add .
+        git commit -m "update$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+        git push --quiet "https://${{ secrets.TOKEN }}@gitee.com/liuran001/MyOpenWrtIPK.git"
+ 
+
+        
+
