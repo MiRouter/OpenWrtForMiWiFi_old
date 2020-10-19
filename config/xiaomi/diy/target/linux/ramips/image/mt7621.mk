@@ -1102,8 +1102,8 @@ define Device/xiaomi_mir3g
   DEVICE_MODEL := Mi Router 3G
   SUPPORTED_DEVICES += R3G
   SUPPORTED_DEVICES += mir3g
-  DEVICE_PACKAGES := kmod-mt7603e kmod-mt76x2e luci-app-mtwifi kmod-usb3 \
-	kmod-usb-ledtrig-usbport uboot-envtools
+  DEVICE_PACKAGES := kmod-mt7603e kmod-mt76x2 luci-app-mtwifi kmod-usb3 \
+	kmod-usb-ledtrig-usbport uboot-envtools wpad-openssl
 endef
 TARGET_DEVICES += xiaomi_mir3g
 
@@ -1173,8 +1173,8 @@ define Device/xiaomi-ac2100
 							 append-kernel | pad-to $$(KERNEL_SIZE) | \
 							 append-ubi | check-size $$$$(IMAGE_SIZE)
   DEVICE_VENDOR := Xiaomi
-  DEVICE_PACKAGES := kmod-mt7603e kmod-mt7615d luci-app-mtwifi \
-	uboot-envtools -wpad-openssl
+  DEVICE_PACKAGES := kmod-mt7603e kmod-mt7615e luci-app-mtwifi \
+	uboot-envtools wpad-openssl
 endef
 
 define Device/xiaomi_mi-router-ac2100
