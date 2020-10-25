@@ -7,7 +7,7 @@ svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-passwall-pl
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-theme-ifit package/luci-theme-ifit
 svn co  https://github.com/liuran001/openwrt-packages/trunk/openwrt-udpspeeder package/udpspeeder
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-
+sed -i 's/\"%builddate\"/\"$(date +"%Y%m%d")\"/g' package/lean/default-settings/files/zzz-default-settings
 
 
 #                  佛祖保佑       永不宕机     永无BUG              //
