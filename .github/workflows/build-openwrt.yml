@@ -55,6 +55,7 @@ jobs:
         echo "UPLOAD_COWTRANSFER=${UPLOAD_COWTRANSFER}" >> $GITHUB_ENV
         echo "UPLOAD_WETRANSFER=${UPLOAD_WETRANSFER}" >> $GITHUB_ENV
         echo "UPLOAD_RELEASE=${UPLOAD_RELEASE}" >> $GITHUB_ENV
+        echo "UPLOAD_BIN_TO_GITHUB=${UPLOAD_BIN_TO_GITHUB}" >> $GITHUB_ENV
 
     - name: Initialization environment
       env:
@@ -192,6 +193,23 @@ jobs:
       with:
         name: OpenWrt_packages${{ env.FILE_DATE }}
         path: openwrt/bin/packages
+        
+    - name: Upload bin directory to GitHub
+      if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_TO_GITHUB == 'true'
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git clone https://github.com/MiRouter/OpenWrtForMiWiFi.git uploadfiles
+        cd $GITHUB_WORKSPACE/uploadfiles/bin
+        rm -Rf *
+        git rm --cache *
+        cp -rf $GITHUB_WORKSPACE/openwrt/bin/* $GITHUB_WORKSPACE/uploadfiles/bin
+        cd ..
+        git add .
+        git commit -m "update$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+        git push --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/MiRouter/OpenWrtForMiWiFi" HEAD:main
 
     - name: Organize files
       id: organize
@@ -236,6 +254,7 @@ jobs:
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "::set-output name=status::success"
+
     - name: Upload firmware to release
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
