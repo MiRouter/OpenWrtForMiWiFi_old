@@ -1,0 +1,44 @@
+{
+  "id": "xiaomi_mi-router-ac2100",
+  "image_prefix": "openwrt-r20.10-beta-ramips-mt7621-xiaomi_mi-router-ac2100",
+  "images": [
+    {
+      "name": "openwrt-r20.10-beta-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-sysupgrade.bin",
+      "sha256": "600bef6c7e05d53d73ce98d069521163a2872f10b7b2935b6120bc748eba005e",
+      "type": "sysupgrade"
+    },
+    {
+      "name": "openwrt-r20.10-beta-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-kernel1.bin",
+      "sha256": "a7fe826eeb567e0dd106ec08685eda3f65e82a85ec48c8acbfedf41d6f0c93dc",
+      "type": "kernel1"
+    },
+    {
+      "name": "openwrt-r20.10-beta-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-rootfs0.bin",
+      "sha256": "345f4a67cae5f1b5d0c515a0e07a0e3b0728cddad11c3536de4b505ae2686050",
+      "type": "rootfs0"
+    },
+    {
+      "name": "openwrt-r20.10-beta-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-breed-factory.bin",
+      "sha256": "97754c171e4dd440e05de7afbe550b554d76f5d2ce8cecddb4275182e66df4bf",
+      "type": "breed-factory"
+    },
+    {
+      "name": "openwrt-r20.10-beta-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-factory.bin",
+      "sha256": "780bf50271ddfcefac53579a0ceb05a71fe5201deff8654561cbd6c50ea94541",
+      "type": "factory"
+    }
+  ],
+  "metadata_version": 1,
+  "supported_devices": [
+    "xiaomi,mi-router-ac2100"
+  ],
+  "target": "ramips/mt7621",
+  "titles": [
+    {
+      "model": "Mi Router AC2100",
+      "vendor": "Xiaomi"
+    }
+  ],
+  "version_commit": "Beta",
+  "version_number": "R20.10"
+}
