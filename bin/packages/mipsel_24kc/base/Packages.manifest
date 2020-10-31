@@ -17,20 +17,20 @@ Description:  Provides support for 6in4 tunnels in /etc/config/network.
  configuration details.
 
 Package: AdGuardHome
-Version: 0.103.3-1
+Version: 0.104.0-1
 Depends: libc, ca-bundle
 Source: package/ntlf9t/AdGuardHome
 SourceName: AdGuardHome
 License: GPL-3.0-only
 LicenseFiles: LICENSE.txt
 Section: net
-SourceDateEpoch: 1600512895
+SourceDateEpoch: 1604041486
 Maintainer: Dobroslaw Kijowski <dobo90@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 4858950
-Filename: AdGuardHome_0.103.3-1_mipsel_24kc.ipk
-Size: 4860628
-SHA256sum: 2e50872eb279affb5663abd9e3153587e864d497f012c37c15000e600a550297
+Installed-Size: 5860269
+Filename: AdGuardHome_0.104.0-1_mipsel_24kc.ipk
+Size: 5862089
+SHA256sum: 83d98bc906f39e5ff5e383a1cc4885aecfb675f6b517588f502d4d7d1054d9b5
 Description:  Free and open source, powerful network-wide ads and trackers blocking DNS server.
 
 Package: ChinaDNS
@@ -59,10 +59,10 @@ Section: multimedia
 SourceDateEpoch: 1603608078
 Maintainer: Silvan <cnsilvan@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 1540418
+Installed-Size: 1540540
 Filename: UnblockNeteaseMusic-Go_0.2.7-1_mipsel_24kc.ipk
-Size: 1541476
-SHA256sum: b08597bbf0a333c5b5f96a3b201d1ecddb7cda438257757b1dc5fec1be69dbc2
+Size: 1541611
+SHA256sum: c8deb9698f5972f5b787a2dac986b1270fe2a8305888c678ee7cba84ff01cbe0
 Description:  Revive Netease Cloud Music (Golang)
 
 Package: adb
@@ -264,12 +264,12 @@ SourceName: default-settings
 License: GPLv3
 LicenseFiles: LICENSE
 Section: luci
-SourceDateEpoch: 1601895314
+SourceDateEpoch: 1603980867
 Architecture: all
-Installed-Size: 10915
+Installed-Size: 10914
 Filename: default-settings_1.1-61_all.ipk
-Size: 11672
-SHA256sum: 9a0629857acdfc00f81845fd4a5b77d0e1e1fc5487130c1e18897dd417d876bd
+Size: 11666
+SHA256sum: 1643956ebe0d567e6ba9260ab13d6129b858ece80d873bc3fe7bbf1787f8b9fe
 Description:  Language Support Packages.
 
 Package: dns2socks
@@ -314,8 +314,8 @@ Maintainer: Dennis <openwrt@tossp.com>
 Architecture: mipsel_24kc
 Installed-Size: 73370
 Filename: dnsforwarder_6.1.15-10_mipsel_24kc.ipk
-Size: 74325
-SHA256sum: 57ed9566bbe92dad2dcc791928bad9b48ea38b73c555657e4927c8e93dc22d2c
+Size: 74321
+SHA256sum: c62c0a3afc4681cc6858dd8bc2ce13ee8e8908ef306905f7802aba62033ec4d6
 Description:  Forwarding queries to customized domains (and their subdomains) to specified servers over a specified protocol (UDP or TCP). non-standard ports are supported.
 
 Package: dnsmasq-full
@@ -385,10 +385,10 @@ Section: net
 SourceDateEpoch: 1602322518
 Maintainer: Xingwang Liao <kuoruan@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 2359202
+Installed-Size: 2358852
 Filename: frpc_0.34.1-1_mipsel_24kc.ipk
-Size: 2360578
-SHA256sum: de8a184ffc64e1bbaebfbe0d974ae1475732bbf51d3a6aef4768bedc3914e615
+Size: 2360217
+SHA256sum: 1085092d34c2d8f588c83a237508618149c55c1d32dd67f94dd91db811c2d936
 Description:  frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall
  to the internet. As of now, it supports tcp & udp, as well as http and https protocols,
  where requests can be forwarded to internal services by domain name.
@@ -406,10 +406,10 @@ Section: net
 SourceDateEpoch: 1602322518
 Maintainer: Xingwang Liao <kuoruan@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 2979994
+Installed-Size: 2979890
 Filename: frps_0.34.1-1_mipsel_24kc.ipk
-Size: 2981458
-SHA256sum: f11f3312627d04a640cffc1b73f19620230b316958996518351ffd7f1646e4dc
+Size: 2981361
+SHA256sum: faa46eb2d5a8e8aff4d6054fc9b009d8ea74f33b894f0e95cdd588bfd5126b3e
 Description:  frp is a fast reverse proxy to help you expose a local server behind a NAT or firewall
  to the internet. As of now, it supports tcp & udp, as well as http and https protocols,
  where requests can be forwarded to internal services by domain name.
@@ -607,10 +607,10 @@ Section: net
 SourceDateEpoch: 1602605324
 Maintainer: Xingwang Liao <kuoruan@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 1585311
+Installed-Size: 1584802
 Filename: kcptun-client_20201010-1_mipsel_24kc.ipk
-Size: 1586473
-SHA256sum: 1c6ec4db06bd400fc794f5049e7227511e6bf61c32fa4ddcec24e3a394d0e637
+Size: 1585962
+SHA256sum: 9cd6b41fe08b1f6b0d99c981a4d44390c1931f729c5a526fe3ef0553b286fbdb
 Description:  A Stable & Secure Tunnel Based On KCP with N:M Multiplexing.
  
  This package contains the kcptun client.
@@ -735,10 +735,10 @@ SourceDateEpoch: 1587470072
 CPE-ID: cpe:/a:elfutils_project:elfutils
 Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 42530
+Installed-Size: 42531
 Filename: libelf1_0.179-1_mipsel_24kc.ipk
-Size: 43371
-SHA256sum: 5fe059ec01e6ffa37aa5bc63a446e498031f0af62206b43cc108c62436f48bd9
+Size: 43364
+SHA256sum: 65d4ee1737bec674174b8d244e4de359205b85f6148c8ce120d2915ebeec8392
 Description:  ELF manipulation libraries (libelf)
 
 Package: libext2fs2
@@ -1117,7 +1117,7 @@ Architecture: mipsel_24kc
 Installed-Size: 1179303
 Filename: libopenssl1.1_1.1.1h-1_mipsel_24kc.ipk
 Size: 1169405
-SHA256sum: 9088b3a229d781bc2bc13fdff7d4811378dd8b7fd7f72c47a286a350e59f359a
+SHA256sum: 582ca1b7d3daf2dfa7f96b747fb85a6fbc8c8b6e59360e1a6f785e50fe691a92
 Description:  The OpenSSL Project is a collaborative effort to develop a robust,
  commercial-grade, full-featured, and Open Source toolkit implementing the
  Transport Layer Security (TLS) protocol as well as a full-strength
@@ -1313,13 +1313,13 @@ Source: package/system/uci
 SourceName: libuci-lua
 License: LGPL-2.1
 Section: libs
-SourceDateEpoch: 1594010212
+SourceDateEpoch: 1604073500
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: mipsel_24kc
 Installed-Size: 5987
 Filename: libuci-lua_2019-05-17-f199b961-1_mipsel_24kc.ipk
-Size: 6752
-SHA256sum: 6e6bfd5de126dd49f04dd2808e03a42247f0c79c569674b481bb8b93e62663fd
+Size: 6757
+SHA256sum: 8a6308c52a2957c0c061f5a7c6a6f3d8b1e7b92ce3754138e0fc88bb7e4fb77a
 Description:  Lua plugin for UCI
 
 Package: libuci20130104
@@ -1330,13 +1330,13 @@ Source: package/system/uci
 SourceName: libuci
 License: LGPL-2.1
 Section: libs
-SourceDateEpoch: 1594010212
+SourceDateEpoch: 1604073500
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: mipsel_24kc
-Installed-Size: 14745
+Installed-Size: 14790
 Filename: libuci20130104_2019-05-17-f199b961-1_mipsel_24kc.ipk
-Size: 15483
-SHA256sum: 5ae8f0bee4c32b0daaf0b2ebf8ab955fe65fc8ed06f7caa7a4e5e0f4caab812a
+Size: 15531
+SHA256sum: b86b2b22bd765cbd641363ab17b921232895ebe0756d627e484f42d52e97403f
 Description:  C library for the Unified Configuration Interface (UCI)
 
 Package: libuclient20160123
@@ -1539,7 +1539,7 @@ SHA256sum: 6ba8117741c6e45da176596043e41e82100f34d5bfe39752cd0c281a27f1b3ca
 Description:  Luci for Apple Airplay2 Receiver
 
 Package: luci-app-amule
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc, amule
 Source: package/lean/luci-app-amule
 SourceName: luci-app-amule
@@ -1547,9 +1547,9 @@ Section: luci
 SourceDateEpoch: 1569824866
 Architecture: all
 Installed-Size: 12834
-Filename: luci-app-amule_git-20.301.37514-f78be6e-1_all.ipk
+Filename: luci-app-amule_git-20.305.16684-59e875b-1_all.ipk
 Size: 13633
-SHA256sum: 3123f12d50ff0ad69a256e87ed27834996167133e005b74e8fd49f61dcd2c2e9
+SHA256sum: 546c8930307ede4cad4fa499ab07c3254e8c7756b6d7d1b84c59498346b1cde0
 Description:  LuCI support for Amule
 
 Package: luci-app-appfilter
@@ -1565,6 +1565,20 @@ Filename: luci-app-appfilter_3.0-1_all.ipk
 Size: 4083
 SHA256sum: f495f9d2e7b15703e07ea61c5a366ad0726fbb2513adc2f0a48ce73c51caf41d
 Description:  Open App Filter Module
+
+Package: luci-app-argon-config
+Version: 0.8-beta
+Depends: libc
+Source: package/luci-app-argon-config
+SourceName: luci-app-argon-config
+Section: luci
+SourceDateEpoch: 1600005707
+Architecture: all
+Installed-Size: 4878
+Filename: luci-app-argon-config_0.8-beta_all.ipk
+Size: 5583
+SHA256sum: 184b1201ef506a4e9673b3c4e4445b1eda69b2167e70b82ba17207da69ce6049
+Description:  LuCI page for Argon Config
 
 Package: luci-app-arpbind
 Version: 1-2
@@ -1700,7 +1714,7 @@ SHA256sum: 070f1df62d2f686c6942c3e1c5f7cdf1f80102f6e69e1099e2c21ee3b14ea80f
 Description:  LuCI support for Fileassistant
 
 Package: luci-app-filetransfer
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc, luci-lib-fs
 Source: package/lean/luci-app-filetransfer
 SourceName: luci-app-filetransfer
@@ -1708,9 +1722,9 @@ Section: luci
 SourceDateEpoch: 1593337837
 Architecture: all
 Installed-Size: 2544
-Filename: luci-app-filetransfer_git-20.301.37514-f78be6e-1_all.ipk
-Size: 3269
-SHA256sum: 7b84a77c8e7914fcc52f5105ff94031d048830669b66185c8ec3de621630fc90
+Filename: luci-app-filetransfer_git-20.305.16684-59e875b-1_all.ipk
+Size: 3267
+SHA256sum: 5162955f8d6692bb3d21fc012157920733164bc003da041c3647567453be519f
 Description:  LuCI page for IPK upload
 
 Package: luci-app-frpc
@@ -1784,13 +1798,13 @@ SourceName: luci-app-koolproxyR
 License: GPLv3
 LicenseFiles: LICENSE
 Section: luci
-SourceDateEpoch: 1603974410
+SourceDateEpoch: 1604164877
 Maintainer: panda-mute
 Architecture: mipsel_24kc
-Installed-Size: 1733614
+Installed-Size: 1733633
 Filename: luci-app-koolproxyR_3.8.5-1-20201009_mipsel_24kc.ipk
-Size: 1734829
-SHA256sum: 5bf2a302241f81722b9cac62b7ae79ac92fbfc77a63a18e8eaa4fc4f20c447ee
+Size: 1734860
+SHA256sum: 98b6e84939892019bc828c42202ebf249dad679e27930274581ab47e3f81cc8b
 Description:  This package contains LuCI configuration pages for koolproxy.
 
 Package: luci-app-ksmbd
@@ -1852,18 +1866,18 @@ SHA256sum: 9862f8990811c74545f6183e4b8b75533db39bc96b7f912485994105046b39e2
 Description:  LuCI support for netdata
 
 Package: luci-app-openclash
-Version: 0.40.13-beta
+Version: 0.40.14-beta
 Depends: libc, iptables, dnsmasq-full, coreutils, coreutils-nohup, bash, curl, jsonfilter, ca-certificates, ipset, ip-full, iptables-mod-tproxy, iptables-mod-extra, libcap
 Source: package/ctcgfw/luci-app-openclash
 SourceName: luci-app-openclash
 Section: opt
-SourceDateEpoch: 1603607585
+SourceDateEpoch: 1603982307
 Maintainer: vernesong
 Architecture: all
-Installed-Size: 2793893
-Filename: luci-app-openclash_0.40.13-beta_all.ipk
-Size: 2629293
-SHA256sum: f03fccaefccbb5cbb4b96c23d9a6893e4858caba87c6c0ef2469f4fbb9bae20c
+Installed-Size: 2795378
+Filename: luci-app-openclash_0.40.14-beta_all.ipk
+Size: 2630535
+SHA256sum: be6ca4d69a8d02106a4a7fa1615bc3a27aae2981d95d868e794370402953b3f8
 Description:  A LuCI support for clash
 
 Package: luci-app-openvpn-server
@@ -1886,13 +1900,13 @@ Depends: libc, bash, ipset, curl, jsonfilter, libpthread, libopenssl1.1, luci-co
 Source: package/luci-app-passwall-plus
 SourceName: luci-app-passwall-plus
 Section: luci
-SourceDateEpoch: 1603974410
+SourceDateEpoch: 1604164877
 Maintainer: yiguihai
 Architecture: all
-Installed-Size: 24427
+Installed-Size: 24424
 Filename: luci-app-passwall-plus_1.2-1_all.ipk
-Size: 25422
-SHA256sum: 3ab60ffecdf8b3a06a5f3a43589b7963ccd2b8355659c5eba8f49bab9158e41d
+Size: 25416
+SHA256sum: 6fa8c541ff7d83eda4e3e4a4449d81b47a4c71f4c13f0f75f0df5f8ea92ad70d
 Description:  This is probably the best proxy script.
 
 Package: luci-app-passwall
@@ -1943,12 +1957,12 @@ Depends: libc, iputils-arping, curl
 Source: package/ctcgfw/luci-app-serverchan
 SourceName: luci-app-serverchan
 Section: luci
-SourceDateEpoch: 1603608034
+SourceDateEpoch: 1603982015
 Architecture: all
-Installed-Size: 19097
+Installed-Size: 19156
 Filename: luci-app-serverchan_1.79-8_all.ipk
-Size: 19870
-SHA256sum: 8016176d3ef76fdf2feab6862083da889fc8a5de5ac64ff64d4e8137fd8bc682
+Size: 19924
+SHA256sum: ba982556f7fa0180fea1a15498bb9ae5516aa540f42d700bb671a6d50c1130b3
 Description:  LuCI support for serverchan
 
 Package: luci-app-smartdns
@@ -2175,12 +2189,12 @@ Depends: libc, shadowsocksr-libev-alt, ipset, ip-full, iptables-mod-tproxy, dnsm
 Source: package/luci-app-vssr-plus
 SourceName: luci-app-vssr-plus
 Section: luci
-SourceDateEpoch: 1603974410
+SourceDateEpoch: 1604164877
 Architecture: all
-Installed-Size: 3718661
+Installed-Size: 3718477
 Filename: luci-app-vssr-plus_1.33-4-20200414_all.ipk
-Size: 3536375
-SHA256sum: 1d721dfd49e9db215d88bd3e270246f7ec6725a526ca82785f23267c747f0c0d
+Size: 3536514
+SHA256sum: 1c657349b2a04b36f3c189dc4903a8a5616b533778ee3a319ff937378886a549
 Description:  A New SS/SSR/V2Ray/Trojan/Socks5 LuCI interface
 
 Package: luci-app-vssr
@@ -2189,12 +2203,12 @@ Depends: libc, shadowsocksr-libev-alt, ipset, ip-full, iptables-mod-tproxy, dnsm
 Source: package/ctcgfw/luci-app-vssr
 SourceName: luci-app-vssr
 Section: luci
-SourceDateEpoch: 1599826429
+SourceDateEpoch: 1603981893
 Architecture: all
-Installed-Size: 3077691
+Installed-Size: 3077712
 Filename: luci-app-vssr_1.17-1-20200830_all.ipk
-Size: 2911199
-SHA256sum: 1b82e607bc1c0f8138b5681bceba2b43a3d6bb740b6e1e15da461be3a360c1db
+Size: 2911273
+SHA256sum: d81c0a801824dedf9806358c8c6dd7d6ce0860151656b1b897810889f94a28e0
 Description:  A New SS/SSR/V2Ray/Trojan LuCI interface
 
 Package: luci-app-wrtbwmon
@@ -2299,7 +2313,7 @@ SHA256sum: 468695d98fd4ec6e996704e87795d1c5f828e1749fa99b988ef4f8cc398b60b4
 Description:  Translation for luci-app-airplay2 - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-amule-zh-cn
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc, luci-app-amule
 Source: package/lean/luci-app-amule
 SourceName: luci-i18n-amule-zh-cn
@@ -2307,9 +2321,9 @@ Section: luci
 SourceDateEpoch: 1569824866
 Architecture: all
 Installed-Size: 3624
-Filename: luci-i18n-amule-zh-cn_git-20.301.37514-f78be6e-1_all.ipk
-Size: 4441
-SHA256sum: d2a1ed578af9a873b39f91deee5afd1709fb71d142aa2bc277a4ccc529da2535
+Filename: luci-i18n-amule-zh-cn_git-20.305.16684-59e875b-1_all.ipk
+Size: 4437
+SHA256sum: 55b13d5299eae28715024834afa301ee9afdca496e8e866e081d3d85865972fd
 Description:  Translation for luci-app-amule - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-appfilter-zh-cn
@@ -2401,7 +2415,7 @@ SHA256sum: 4b2307677953e676b02268e1d7776845d9e9bc01c0dffbbdca264d6782c3f116
 Description:  Translation for luci-app-eqos - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-filetransfer-zh-cn
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc, luci-app-filetransfer
 Source: package/lean/luci-app-filetransfer
 SourceName: luci-i18n-filetransfer-zh-cn
@@ -2409,9 +2423,9 @@ Section: luci
 SourceDateEpoch: 1593337837
 Architecture: all
 Installed-Size: 866
-Filename: luci-i18n-filetransfer-zh-cn_git-20.301.37514-f78be6e-1_all.ipk
-Size: 1724
-SHA256sum: 785e81174520ff6b006435c0f2a67115016ded215db403e06ee9f76f9e80694c
+Filename: luci-i18n-filetransfer-zh-cn_git-20.305.16684-59e875b-1_all.ipk
+Size: 1729
+SHA256sum: 262a2d97494ac9773bbb58735f3b08d6bb9d98f83a8891c60a824a43231b4cfb
 Description:  Translation for luci-app-filetransfer - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-frpc-zh-cn
@@ -2811,12 +2825,12 @@ Depends: libc
 Source: package/luci-theme-argon-lr
 SourceName: luci-theme-argon-lr
 Section: luci
-SourceDateEpoch: 1603974410
+SourceDateEpoch: 1604164877
 Architecture: all
-Installed-Size: 3660745
+Installed-Size: 3661435
 Filename: luci-theme-argon-lr_1-20201005_all.ipk
-Size: 3660004
-SHA256sum: c4da13dca80a7b3f25899e354c9146ff8d8910ca68a8d191bfa86d3cfc8370b5
+Size: 3660639
+SHA256sum: 131cb6340c2b6974d17831c15ba1f2324887d3b467c151d6afa696e327a2ee2f
 Description:  Argon Theme magic version
 
 Package: luci-theme-atmaterial
@@ -2848,31 +2862,31 @@ SHA256sum: 3cfc583c75f7e17af7dc8cdc634a0c9404804628daf725233f1fea272adb67a8
 Description:  Bootstrap Mod Theme By Lienol
 
 Package: luci-theme-darkmatter
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc
 Source: package/ctcgfw/luci-theme-darkmatter
 SourceName: luci-theme-darkmatter
 Section: luci
 SourceDateEpoch: 1588649778
 Architecture: all
-Installed-Size: 66977
-Filename: luci-theme-darkmatter_git-20.301.37514-f78be6e-1_all.ipk
+Installed-Size: 66978
+Filename: luci-theme-darkmatter_git-20.305.16684-59e875b-1_all.ipk
 Size: 67844
-SHA256sum: 23b2563687b18b4f7e7ce77df18561b098d92265bb8cdc931c8b7c9ddd43dd8f
+SHA256sum: ffb8803c835fd280d118b7d6d49253829e2fa62e64ca183521d1d790c61688ea
 Description:  DarkMatter Theme
 
 Package: luci-theme-edge
-Version: 2.1-20200914
+Version: 2.2-20201029
 Depends: libc
 Source: package/ctcgfw/luci-theme-edge
 SourceName: luci-theme-edge
 Section: luci
-SourceDateEpoch: 1603424310
+SourceDateEpoch: 1603981824
 Architecture: all
-Installed-Size: 177819
-Filename: luci-theme-edge_2.1-20200914_all.ipk
-Size: 178856
-SHA256sum: ad72aabfd602aacf3f0822432394b97d7aaaa31206b5536bd5ffca7791ba1560
+Installed-Size: 176689
+Filename: luci-theme-edge_2.2-20201029_all.ipk
+Size: 177749
+SHA256sum: f4734e7d636217913f8edc212c71a0ca53598b7e2994be2a70fd8f3bcdc5e338
 Description:  Edge Theme
 
 Package: luci-theme-ifit
@@ -2881,16 +2895,16 @@ Depends: libc
 Source: package/luci-theme-ifit
 SourceName: luci-theme-ifit
 Section: luci
-SourceDateEpoch: 1603974410
+SourceDateEpoch: 1604164877
 Architecture: all
-Installed-Size: 2119591
+Installed-Size: 2119589
 Filename: luci-theme-ifit_20200706-0_all.ipk
-Size: 2120497
-SHA256sum: 108ae900924a916f7290b18e3d58f3a20b6a942b15139c03f69122b8153f12b7
+Size: 2120493
+SHA256sum: 86666419eab48b4c222ea2e8c9242dfb256e5dd787bb5bf5d1ba1f81ad9bb60d
 Description:  Infinity Freedom Theme
 
 Package: luci-theme-netgear
-Version: git-20.301.37514-f78be6e-3
+Version: git-20.305.16684-59e875b-3
 Depends: libc
 Source: package/lean/luci-theme-netgear
 SourceName: luci-theme-netgear
@@ -2898,13 +2912,13 @@ Section: luci
 SourceDateEpoch: 1593835214
 Architecture: all
 Installed-Size: 232844
-Filename: luci-theme-netgear_git-20.301.37514-f78be6e-3_all.ipk
+Filename: luci-theme-netgear_git-20.305.16684-59e875b-3_all.ipk
 Size: 233719
-SHA256sum: 180cb1e95c630911b50427d445b585c9d3c75e45af6c80fa43302af80199642a
+SHA256sum: fb5b28829704ae61f737bbc633dbacef6bdb2f44dd0d2dc9483d3bb7162579a0
 Description:  Netgear Theme
 
 Package: luci-theme-netgearv2
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc
 Source: package/ctcgfw/luci-theme-netgearv2
 SourceName: luci-theme-netgearv2
@@ -2912,23 +2926,23 @@ Section: luci
 SourceDateEpoch: 1588649778
 Architecture: all
 Installed-Size: 210066
-Filename: luci-theme-netgearv2_git-20.301.37514-f78be6e-1_all.ipk
-Size: 210926
-SHA256sum: 64bbfa5e5cf228d6a1c89d1501a81c346ec0f09b789b0aa968390af48cd94f04
+Filename: luci-theme-netgearv2_git-20.305.16684-59e875b-1_all.ipk
+Size: 210924
+SHA256sum: 24855d326b3fb8e5d36049a2f861c2230964c63473ae87e6b6250df7fba2c9e9
 Description:  Netgear Theme
 
 Package: luci-theme-opentomato
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc
 Source: package/ctcgfw/luci-theme-opentomato
 SourceName: luci-theme-opentomato
 Section: luci
 SourceDateEpoch: 1588583476
 Architecture: all
-Installed-Size: 214915
-Filename: luci-theme-opentomato_git-20.301.37514-f78be6e-1_all.ipk
-Size: 215733
-SHA256sum: a7408b180c1518ea78f64399f0b2563969867241bfbe83fd9003880b8081e00e
+Installed-Size: 214916
+Filename: luci-theme-opentomato_git-20.305.16684-59e875b-1_all.ipk
+Size: 215732
+SHA256sum: c27d92f2249b014beaabde6864c89d478dc46c4ab03cb4377fbc1e0735ded11c
 Description:  OpenTomato Theme
 
 Package: luci-theme-opentomcat
@@ -2946,17 +2960,17 @@ SHA256sum: eff318346036ec37e9edff635c88067512ffde796e7fc0e7999ae30b9a9004f4
 Description:  Advanced Tomato Material
 
 Package: luci-theme-rosy
-Version: git-20.301.37514-f78be6e-1
+Version: git-20.305.16684-59e875b-1
 Depends: libc
 Source: package/ctcgfw/luci-theme-rosy
 SourceName: luci-theme-rosy
 Section: luci
 SourceDateEpoch: 1588583476
 Architecture: all
-Installed-Size: 107882
-Filename: luci-theme-rosy_git-20.301.37514-f78be6e-1_all.ipk
-Size: 108704
-SHA256sum: ddf32d036005bb7791ee7e6f74af663eddad10fdd6a4e1defae676bcf5762d5f
+Installed-Size: 107883
+Filename: luci-theme-rosy_git-20.305.16684-59e875b-1_all.ipk
+Size: 108703
+SHA256sum: 39ba111fd121eb65adc1bc43d1d6f89bf07e18f083d065ad3377e3d54af5c465
 Description:  Rosy Theme
 
 Package: microsocks
@@ -2991,19 +3005,19 @@ SHA256sum: cb2e70a54f349185514873e1227c10b0d6f59ec6ab6dbbf4929f8e56ad83db05
 Description:  MT_WiFi auto config for mt7603/mt7612/mt7615 chips
 
 Package: netifd
-Version: 2020-06-06-51e9fb81-1
+Version: 2020-10-22-24ce1eab-1
 Depends: libc, libuci20130104, libnl-tiny, libubus20191227, ubus, ubusd, jshn, libubox20191228
 Source: package/network/config/netifd
 SourceName: netifd
 License: GPL-2.0
 Section: base
-SourceDateEpoch: 1596459572
+SourceDateEpoch: 1604118092
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: mipsel_24kc
-Installed-Size: 64248
-Filename: netifd_2020-06-06-51e9fb81-1_mipsel_24kc.ipk
-Size: 65110
-SHA256sum: c29cc8aad9d36d699bb05459d4b2def1c25e8fff946632367ad5367d9e04943c
+Installed-Size: 65848
+Filename: netifd_2020-10-22-24ce1eab-1_mipsel_24kc.ipk
+Size: 66527
+SHA256sum: 9eae7f7a7c5bfd2315099f2dbc8fbaceb302a8010e85ef61558cf8d7f46e4cd3
 Description:  OpenWrt Network Interface Configuration Daemon
 
 Package: odhcp6c
@@ -3237,10 +3251,10 @@ LicenseFiles: COPYING
 Section: net
 SourceDateEpoch: 1601756069
 Architecture: mipsel_24kc
-Installed-Size: 3707449
+Installed-Size: 3707450
 Filename: qBittorrent-Enhanced-Edition_4.2.5.16-1_mipsel_24kc.ipk
-Size: 3705882
-SHA256sum: 44259aea432db75fd0c897b5be3efe9b5db3ad246d13e48686bcf01ffc071b03
+Size: 3705868
+SHA256sum: d1098a3ead31b016df1043b44049eb53fded814b2b14ff971889831e77971ce5
 Description:  qBittorrent is a bittorrent client programmed in C++ / Qt that uses 
  libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
  It aims to be a good alternative to all other bittorrent clients out 
@@ -3273,10 +3287,10 @@ SourceName: qt5-core
 Section: libs
 SourceDateEpoch: 1586277172
 Architecture: mipsel_24kc
-Installed-Size: 2587406
+Installed-Size: 2587404
 Filename: qt5-core_5.13-2_mipsel_24kc.ipk
-Size: 2581653
-SHA256sum: 9c116bb4388dca56d01ac88f08fe637c8912d71b9ad60673dde9e388ac547427
+Size: 2581620
+SHA256sum: 9853bd1c2b64f487a9186dd1bde3178940521dfd2cf2e0fbaf427b72e67c4a22
 Description:  qt5 core
 
 Package: qt5-network
@@ -3289,8 +3303,8 @@ SourceDateEpoch: 1586277172
 Architecture: mipsel_24kc
 Installed-Size: 737873
 Filename: qt5-network_5.13-2_mipsel_24kc.ipk
-Size: 736628
-SHA256sum: ee488054430a271134d33ac139016f27b2741310b771cec3b8a1bbde082dde7a
+Size: 736649
+SHA256sum: e99b2dea74f527563deba10a7983899c6fc321d5a6bf3e9c32124b6eb2f91d94
 Description:  qt5 network
 
 Package: qt5-xml
@@ -3303,8 +3317,8 @@ SourceDateEpoch: 1586277172
 Architecture: mipsel_24kc
 Installed-Size: 104595
 Filename: qt5-xml_5.13-2_mipsel_24kc.ipk
-Size: 105202
-SHA256sum: de5e0d003b88e7af04ffde4ca0220f359a22b3e47da40b9b93fa6415e9abed27
+Size: 105211
+SHA256sum: 6507bbf84f804eee9f077e3f6e7039a304ac57f390f6fa0dd3e6d1b7e01304f2
 Description:  qt5 xml
 
 Package: resolveip
@@ -3451,10 +3465,10 @@ Section: net
 SourceDateEpoch: 1599842009
 Maintainer: Nick Peng <pymumu@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 67751
+Installed-Size: 67753
 Filename: smartdns_9.2020.08-1_mipsel_24kc.ipk
-Size: 68663
-SHA256sum: 870f0e16f3d9dc552825f236bf607eb3025b254c5d3eefddd40878bad9d08ff5
+Size: 68592
+SHA256sum: 79c134c558fd0ce5893a7513c9d1fd269d532940c5e682d6dfcc74cb4db7cae5
 Description:  SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
  get DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
  Unlike dnsmasq's all-servers, smartdns returns the fastest IP. 
@@ -3642,13 +3656,13 @@ Source: package/system/uci
 SourceName: uci
 License: LGPL-2.1
 Section: base
-SourceDateEpoch: 1594010212
+SourceDateEpoch: 1604073500
 Maintainer: Felix Fietkau <nbd@nbd.name>
 Architecture: mipsel_24kc
-Installed-Size: 6397
+Installed-Size: 6398
 Filename: uci_2019-05-17-f199b961-1_mipsel_24kc.ipk
-Size: 7211
-SHA256sum: 4ce72472b8abff7c56d9ff990b8a78845b0c4d7da509275f3a34fad3af37ef39
+Size: 7213
+SHA256sum: 935937d528471860e30af65450fcda483af460de5859cbe7dbbb9bc2f983d7ce
 Description:  Utility for the Unified Configuration Interface (UCI)
 
 Package: uclibcxx
@@ -3695,10 +3709,10 @@ Section: net
 SourceDateEpoch: 1602010958
 Maintainer: Yu Wang
 Architecture: mipsel_24kc
-Installed-Size: 135683
+Installed-Size: 135686
 Filename: udp2raw-tunnel_20200818.0-1_mipsel_24kc.ipk
-Size: 135812
-SHA256sum: 84ee514b28377d669eb8d16290a6465c14c81cf320159d414929866ee33d31d7
+Size: 135817
+SHA256sum: 129ffec4046040b4d220e094254c48a8755575ec87e078bb95289d29c532969d
 Description:  udp2raw-tunnel is a tunnel which turns UDP Traffic into Encrypted FakeTCP/UDP/ICMP Traffic by using Raw Socket.
 
 Package: uhttpd-mod-ubus
@@ -3803,10 +3817,10 @@ Section: net
 SourceDateEpoch: 1602937249
 Maintainer: madeye <max.c.lv@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 2514332
+Installed-Size: 2514229
 Filename: v2ray-plugin_1.6.0-1_mipsel_24kc.ipk
-Size: 2515619
-SHA256sum: 8d5d8d550cc65884786baf3340989666e8302ab2372472368799b13a647532b3
+Size: 2515513
+SHA256sum: b4974a0e4d3ef777cea1794290a23964935270bc1f2a15e7bb148bdaeadc5a54
 Description:  Yet another SIP003 plugin for shadowsocks, based on v2ray
 
 Package: v2ray
@@ -3820,10 +3834,10 @@ Section: net
 SourceDateEpoch: 1603529989
 Maintainer: Xingwang Liao <kuoruan@gmail.com>
 Architecture: mipsel_24kc
-Installed-Size: 3671114
+Installed-Size: 3671903
 Filename: v2ray_4.31.3-2_mipsel_24kc.ipk
-Size: 3672664
-SHA256sum: ce6090a5775883a46d9810bc5be13c816cdc6fb4154e64f84fa53fa8d3a3df34
+Size: 3673433
+SHA256sum: b4a2003983298aa529c1c1e1f5fb7e5805acbf0a3562f984edac711866ba6d8f
 Description:  Project V is a set of network tools that help you to build your own computer network.
  It secures your network connections and thus protects your privacy.
  
@@ -3842,8 +3856,8 @@ Maintainer: fuyumi <280604399@qq.com>
 Architecture: mipsel_24kc
 Installed-Size: 22340
 Filename: vlmcsd_svn1113-1_mipsel_24kc.ipk
-Size: 23072
-SHA256sum: ac33cbce3cc3cf609b51443880293a54ec3a08df4c8ee1893d167d7ff1913534
+Size: 23073
+SHA256sum: 2c0f50599b26dc1354f9c9f4eafd6ee90e3033da3b9899c23efb46858e491100
 Description:  vlmcsd is a KMS Emulator in C.
 
 Package: vsftpd-alt
