@@ -199,7 +199,7 @@ jobs:
       run: |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-        git clone https://github.com/MiRouter/OpenWrtForMiWiFi.git uploadfiles
+        git clone -b bin https://github.com/MiRouter/OpenWrtForMiWiFi.git uploadfiles
         cd $GITHUB_WORKSPACE/uploadfiles/bin
         rm -Rf *
         git rm --cache *
@@ -207,7 +207,7 @@ jobs:
         cd ..
         git add .
         git commit -m "update$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-        git push --quiet "https://${{ secrets.TOKEN }}@github.com/MiRouter/OpenWrtForMiWiFi" HEAD:main
+        git push --quiet "https://${{ secrets.TOKEN }}@github.com/MiRouter/OpenWrtForMiWiFi" HEAD:bin
 
     - name: Organize files
       id: organize
