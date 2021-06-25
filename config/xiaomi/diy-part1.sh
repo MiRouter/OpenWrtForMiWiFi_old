@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "佛祖保佑，编译必成"
-svn co  https://github.com/liuran001/openwrt-theme/trunk/luci-theme-argon-lr package/luci-theme-argon-lr
-svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-koolproxyR package/luci-app-koolproxyR
+#svn co  https://github.com/liuran001/openwrt-theme/trunk/luci-theme-argon-lr package/luci-theme-argon-lr
+git clone https://github.com/immortalwrt/luci-app-koolproxyR package/luci-app-koolproxyR
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-vssr-plus package/luci-app-vssr-plus
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-app-passwall-plus package/luci-app-passwall-plus
 svn co  https://github.com/liuran001/openwrt-packages/trunk/luci-theme-ifit package/luci-theme-ifit
-svn co  https://github.com/liuran001/openwrt-packages/trunk/openwrt-udpspeeder package/udpspeeder
+svn co  https://github.com/liuran001/openwrt-packages/trunk/udpspeeder package/udpspeeder
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 sed -i 's/\"%builddate\"/\"$(date +"%Y%m%d")\"/g' package/lean/default-settings/files/zzz-default-settings
 
