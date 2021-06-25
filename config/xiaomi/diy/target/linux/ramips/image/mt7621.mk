@@ -1103,7 +1103,7 @@ define Device/xiaomi_mir3g
   SUPPORTED_DEVICES += R3G
   SUPPORTED_DEVICES += mir3g
   DEVICE_PACKAGES := kmod-mt7603e kmod-mt76x2e luci-app-mtwifi kmod-usb3 \
-	kmod-usb-ledtrig-usbport uboot-envtools wpad-openssl
+	kmod-usb-ledtrig-usbport uboot-envtools -wpad-openssl
 endef
 TARGET_DEVICES += xiaomi_mir3g
 
