@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "佛祖保佑，编译必成"
-#svn co  https://github.com/liuran001/openwrt-theme/trunk package/p1
+svn co  https://github.com/liuran001/openwrt-packages/trunk package/p1
 git clone https://github.com/immortalwrt/luci-app-koolproxyR package/luci-app-koolproxyR
 sed -i 's/\"%builddate\"/\"$(date +"%Y%m%d")\"/g' package/emortal/default-settings/files/zzz-default-settings
 
